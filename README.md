@@ -1,5 +1,12 @@
 une remade crowbot en JS, node 18.17.1
-la commande setradio ne marche pas, si vous avez trouvez comment la fix faite une pull request
+
+# COMMENT SETUP ?
+Pour mettre le token, aller dans le dossier util et ouvrez login.js
+Vous voyez client.login(process.env.token);  remplacer le process.env.token. par le token de votre bot (ex client.login(MNJsdjuahdakjsdksajdks)
+
+# BUGS
+
+La commande set radio ne marche pas (svp aidez moi a fix mdrr)
 
 # License
 
