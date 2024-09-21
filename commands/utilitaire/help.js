@@ -230,8 +230,6 @@ module.exports = {
             if (3 <= perm) gestion.addField(`\`${prefix}welcome\``, "Permet de paramétrer les actions à effectuer quand un membre rejoint le serveur")
             if (4 <= perm) gestion.addField(`\`${prefix}whitelist <add/clear/list/remove>\``, "Permet de gérer les utilisateurs whitelist")
             if (4 <= perm) gestion.addField(`\`${prefix}theme <color>\``, "Permet de changer la couleur d'embed du bot")
-            if (3 <= perm) gestion.addField(`\`${prefix}setticket\``, "Permet de paramétrer le système de ticket du bot")
-            if (3 <= perm) gestion.addField(`\`${prefix}anti-insulte\``, "Permet de paramétrer le système d'anti insulte")
 
             const bot = new Discord.MessageEmbed()
             bot.setColor(color)
