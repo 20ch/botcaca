@@ -166,6 +166,7 @@ module.exports = {
             if (2 <= perm) util.addField(`\`${prefix}serverinfo [guild]\``, "Permet de d'avoir des informations sur un serveur où ce trouve le bot")
             util.addField(`\`${prefix}snipe\``, "Permet de voir le dernier message supprimés")
             util.addField(`\`${prefix}top [invite/rank]\``, "Permet de voir un classement sois d'invitations, sois de rank")
+            util.addField(`\`${prefix}botinfo\``, "Permet de voir les informations du bot")
             if (2 <= perm) util.addField(`\`${prefix}userinfo [user]\``, "Permet de d'avoir des informations sur un utilisateur")
             if (1 <= perm) util.addField(`\`${prefix}voice [info all/all]\``, "Permet de voir des informations sur les les membres en vocal sur le serveur")
 
@@ -227,6 +228,8 @@ module.exports = {
             if (3 <= perm) gestion.addField(`\`${prefix}welcome\``, "Permet de paramétrer les actions à effectuer quand un membre rejoint le serveur")
             if (4 <= perm) gestion.addField(`\`${prefix}whitelist <add/clear/list/remove>\``, "Permet de gérer les utilisateurs whitelist")
             if (4 <= perm) gestion.addField(`\`${prefix}theme <color>\``, "Permet de changer la couleur d'embed du bot")
+            if (3 <= perm) gestion.addField(`\`${prefix}setticket\``, "Permet de paramétrer le système de ticket du bot")
+            if (3 <= perm) gestion.addField(`\`${prefix}anti-insulte\``, "Permet de paramétrer le système d'anti insulte")
 
             const bot = new Discord.MessageEmbed()
             bot.setColor(color)
