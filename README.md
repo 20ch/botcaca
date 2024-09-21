@@ -8,8 +8,8 @@ NODE 18.17.0 au passage :3
 # BUGS
 
 SETRADIO <br> 
-VCLOGS
-PICONLY
+VCLOGS fixed by **wheresrofl** <br>
+PICONLY <br>
 
 # License
 
