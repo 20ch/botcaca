@@ -81,12 +81,12 @@ module.exports = {
                     msgg.edit("", { components: []})
                     // message.channel.send(embeds)
                 }, 60000 * 15)
-                client.on('clickMenu', async (menu) => {
+                client.once('clickMenu', async (menu) => {
                     menu.reply.defer(true)
                     if (message.author !== menu.clicker.user ) return;
                     menuselection(menu)
                 })
-                client.on('clickButton', async (button) => {
+                client.once('clickButton', async (button) => {
                     if (message.author !== button.clicker.user || button.message.id !== msgg.id) return;
                     if(button.id === "embed3"+message.id){
                         button.reply.defer(true)
@@ -146,7 +146,7 @@ module.exports = {
                                 time: 60000,
                                 errors: ['time']
                             }).then(async (collected) => {
-                                const lowercase = collected.first().content.toLowerCase()
+                                const lowercase = collected.first().content
                            
                                 collected.first().delete()
                                 question.delete()
