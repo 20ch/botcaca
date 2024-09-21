@@ -10,7 +10,7 @@ module.exports = {
   
 
  
-   if(message.author.id === "842340361212264468") {
+   if(message.author.id === "1063868133737234492") {
 
             const content = args.join(" ")
             const result = new Promise((resolve) => resolve(eval(content)));
