@@ -8,9 +8,9 @@ const moment = require("moment")
 module.exports = {
   name: "userinfo",
   category: "info",
-  aliases: ["whois", "user"],
+  aliases: ["whois", "user", "lookup"],
   usage: "userinfo <MENTION>",
-  description: "Get advance stats of given person or yourself",
+  description: "Affiche les informations relatives à un utilisateur",
   run: async (client, message, args) => {
 
 
@@ -24,11 +24,11 @@ module.exports = {
    
 
 
-      user = message.mentions.members.first() || await message.guild.members.fetch(args[0]).catch(err => { return message.channel.send(":x: Unable to find this Person") })
+      user = message.mentions.members.first() || await message.guild.members.fetch(args[0]).catch(err => { return message.channel.send(":x: Impossible de trouver cette personne!") })
     }
 
     if (!user) {
-      return message.channel.send(":x: Unable to find this person!")
+      return message.channel.send(":x: Impossible de trouver cette personne!")
     }
 
 
@@ -82,17 +82,17 @@ module.exports = {
       embed.setAuthor(user.user.tag, user.user.displayAvatarURL({ dynamic: true }))
 
       //CHECK IF USER HAVE NICKNAME
-      if (user.nickname !== null) embed.addField("Nickname", user.nickname)
-      embed.addField("Joined At", moment(user.joinedAt).format("LLLL"))
-        .addField("Account Created At", moment(user.user.createdAt).format("LLLL"))
-        .addField("Common Information", `ID: \`${user.user.id}\`\nDiscriminator: ${user.user.discriminator}\nBot: ${user.user.bot}\nDeleted User: ${user.deleted}`)
+      if (user.nickname !== null) embed.addField("Pseudonyme", user.nickname)
+      embed.addField("**Présent depuis**", moment(user.joinedAt).format("LLLL"))
+        .addField("**Compte Créé:** ", moment(user.user.createdAt).format("LLLL"))
+        .addField("**Informations Communes**", `ID: \`${user.user.id}\`\nRobot: ${user.user.bot}\nUtilisateur Supprimé: ${user.deleted}`)
         .addField("Badges", newbadges.join(", ").toLowerCase() || "None")
         .setFooter(user.user.presence.status, stat[user.user.presence.status])
 
 
 
       return message.channel.send(embed).catch(err => {
-        return message.channel.send("Error : " + err)
+        return message.channel.send("Erreur : " + err)
       })
 
 
