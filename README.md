@@ -29,3 +29,5 @@ Attribution: When you use or modify this code, you must mention the original aut
 For more information, please visit:
 
 https://creativecommons.org/licenses/by-nc/4.0/deed.en
+
+https://img.shields.io/github/license/20ch/crowbot-remade-2024?style=for-the-badge&colorA=131820&colorB=FFFFFF&logo=markdown
