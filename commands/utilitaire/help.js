@@ -100,6 +100,8 @@ module.exports = {
 - \`${client.config.prefix}unban <ID/all>\` 
 - \`${client.config.prefix}unlock [salon/all]\`
 - \`${client.config.prefix}welcome\`
+- \`${client.config.prefix}setticket\`
+- \`${client.config.prefix}anti-insulte\`
 
                 `)
 
