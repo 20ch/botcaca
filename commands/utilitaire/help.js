@@ -95,12 +95,12 @@ module.exports = {
 - \`${client.config.prefix}rolemenu\`
 - \`${client.config.prefix}reward <invite/rank> <add/remove/list/clear>\`
 - \`${client.config.prefix}setpp\`
+- \`${client.config.prefix}setticket\`
 - \`${client.config.prefix}setradio\`
 - \`${client.config.prefix}tempvoc\`
 - \`${client.config.prefix}unban <ID/all>\` 
 - \`${client.config.prefix}unlock [salon/all]\`
 - \`${client.config.prefix}welcome\`
-- \`${client.config.prefix}setticket\`
 - \`${client.config.prefix}anti-insulte\`
 
                 `)
