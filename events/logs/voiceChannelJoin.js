@@ -1,21 +1,25 @@
-const axios = require('axios');         
-const db = require("quick.db")
-const Discord = require("discord.js");
-const ms = require("ms")
+const db = require("quick.db");
+const { MessageEmbed } = require("discord.js");
 
-module.exports = async (client, member, channel) => {
- const color = db.get(`color_${member.guild.id}`) === null? client.config.color:db.get(`color_${member.guild.id}`)
+module.exports = (client, oldState, newState) => {
+    if (!oldState.channel && newState.channel) {
+        const member = newState.member;
+        const guild = newState.guild;
+        const color = db.get(`color_${guild.id}`) || client.config.color;
+        const logChannelId = db.get(`logvc_${guild.id}`);
+        const logChannel = guild.channels.cache.get(logChannelId);
 
- let wass = db.get(`logvc_${member.guild.id}`);
-      
- const logschannel = member.guild.channels.cache.get(wass)
+        if (logChannel) {
+            const embed = new MessageEmbed()
+                .setAuthor(member.user.username, member.user.displayAvatarURL({ dynamic: true }))
+                .setColor(color)
+                .setDescription(`**${member.user.tag}** a rejoint le salon **${newState.channel.name}**`)
+                .setTimestamp();
 
-if(logschannel) logschannel.send(new Discord.MessageEmbed()
- .setAuthor(member.user.username, member.user.displayAvatarURL({dynamic : true }))
- .setColor(color)
- .setDescription(`**${member}** se connecte au salon ${channel.name}`)
-
-)  
-
-}
-  
+            logChannel.send(embed)
+                .catch(err => console.error('Error sending message:', err));
+        } else {
+            console.log('Log channel not found.');
+        }
+    }
+};
