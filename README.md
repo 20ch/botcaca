@@ -1,3 +1,4 @@
+# CONTRIBUTERS
 <a href="https://github.com/20ch/crowbot-remade-2024/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=20ch/crowbot-remade-2024" />
 </a>
