@@ -7,7 +7,9 @@ NODE 18.17.0 au passage :3
 
 # BUGS
 
-La commande set radio ne marche pas (svp aidez moi a fix mdrr)
+SETRADIO 
+VCLOGS
+PICONLY
 
 # License
 
