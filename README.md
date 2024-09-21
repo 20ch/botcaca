@@ -3,6 +3,7 @@ une remade crowbot en JS, node 18.17.1
 # COMMENT SETUP ?
 Pour mettre le token, aller dans le dossier util et ouvrez login.js
 Vous voyez client.login(process.env.token);  remplacer le process.env.token. par le token de votre bot (ex client.login(MNJsdjuahdakjsdksajdks)
+NODE 18.17.0 au passage :3 
 
 # BUGS
 
