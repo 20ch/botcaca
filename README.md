@@ -30,4 +30,4 @@ For more information, please visit:
 
 https://creativecommons.org/licenses/by-nc/4.0/deed.en
 
-https://img.shields.io/github/license/20ch/crowbot-remade-2024?style=for-the-badge&colorA=131820&colorB=FFFFFF&logo=markdown
+<img src="https://img.shields.io/github/license/20ch/crowbot-remade-2024?style=for-the-badge&colorA=131820&colorB=FFFFFF&logo=markdown" />
