@@ -1,4 +1,4 @@
-[![](https://opencollective.com/html-react-parser/contributors.svg?width=890&button=false)](https://github.com/20ch/crowbot-remade-2024/graphs/contributors)
+[![](https://github.com/20ch/crowbot-remade-2024/graphs/contributors)
 
 # COMMENT SETUP ?
 Pour mettre le token, aller dans le dossier util et ouvrez login.js
