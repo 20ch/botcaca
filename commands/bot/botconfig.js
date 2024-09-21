@@ -177,7 +177,7 @@ Actuel: ${secur(db.get(`antijoinbot_${client.user.id}`))}
                         collected2.first().delete()
                         question2.delete()
 
-                        client.user.setActivity(collected2.first().content, { type: type, url: "https://www.twitch.tv/leaaa93" }).then(async (a) => {
+                        client.user.setActivity(collected2.first().content, { type: type, url: "https://www.twitch.tv/crowbots" }).then(async (a) => {
                             updateEmbed(msg,client)
                         })
                     });
