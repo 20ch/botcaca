@@ -10,6 +10,7 @@ NODE 18.17.0 au passage :3
 SETRADIO <br> 
 VCLOGS fixed by **wheresrofl** <br>
 PICONLY <br>
+AntiInsult <br>
 
 # License
 
