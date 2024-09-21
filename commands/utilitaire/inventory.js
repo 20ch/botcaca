@@ -26,7 +26,7 @@ module.exports = {
             .setDescription(formatedInventory)
             .setThumbnail(`https://media.discordapp.net/attachments/747028239884615751/821044567833968710/706473362813091931.gif`)
             .setColor(`${color}`)
-            .setFooter(`© OneForAll Coins`)
+            .setFooter(`© Gestion coins`)
         message.channel.send(`> **Viewing server inventory • [**  ${message.author.tag} **] •** `, {embeds: [embed]})
 
     }
