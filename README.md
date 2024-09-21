@@ -10,7 +10,9 @@ NODE 18.17.0 au passage :3
 
 # BUGS
 
-SETRADIO <br> 
+
+BACKUP REMOVE = Not coded yet. <br>
+SETRADIO = Couldn't fix. <br> 
 VCLOGS fixed by **wheresrofl** <br>
 PICONLY = Couldn't fix. <br>
 AntiInsult = Fixed by **wheresrofl**. <br>
