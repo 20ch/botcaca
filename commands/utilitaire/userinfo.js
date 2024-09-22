@@ -1,104 +1,80 @@
 const Discord = require('discord.js')
 const db = require('quick.db')
-const { MessageActionRow, MessageButton, MessageMenuOption, MessageMenu } = require('discord-buttons');
+const {
+	MessageActionRow,
+	MessageButton,
+	MessageMenuOption,
+	MessageMenu
+} = require('discord-buttons');
 const axios = require('axios')
-const { MessageEmbed } = require("discord.js")
-const moment = require("moment")
 
 module.exports = {
-  name: "userinfo",
-  category: "info",
-  aliases: ["whois", "user", "lookup"],
-  usage: "userinfo <MENTION>",
-  description: "Affiche les informations relatives à un utilisateur",
-  run: async (client, message, args) => {
+	name: 'userinfo',
+	aliases: ['user', 'ui'],
+	run: async (client, message, args, prefix, color) => {
+
+		let perm = ""
+		message.member.roles.cache.forEach(role => {
+			if (db.get(`modsp_${message.guild.id}_${role.id}`)) perm = true
+			if (db.get(`ownerp_${message.guild.id}_${role.id}`)) perm = true
+			if (db.get(`admin_${message.guild.id}_${role.id}`)) perm = true
+		})
+		if (client.config.owner.includes(message.author.id) || db.get(`ownermd_${client.user.id}_${message.author.id}`) === true || perm || db.get(`channelpublic_${message.guild.id}_${message.channel.id}`) === true) {
+
+			let user = message.mentions.members.first()
+			if (user) user = user.id
+			if (!user) user = args[0]
+			if (!user) user = message.author.id
+			if (!message.guild.members.cache.has(user)) return message.channel.send(`Aucun membre trouvé pour \`${args[0]}\``);
+			else user = message.guild.members.cache.get(user)
+
+			let nm = ""
+			client.guilds.cache.map(r => {
+				const list = client.guilds.cache.get(r.id);
+				list.members.cache.map(m => (m.user.id == user.id ? nm++ : nm = nm))
+				//  list.members.cache.map(m => (m.user.id ==member.id? listes= listes+" | `" +list.name+"`" : listes = listes)) 
+			})
+			//console.log(guilds)
 
 
-    let user;
+			const data = await axios.get(`https://discord.com/api/users/${user.id}`, {
+				headers: {
+					Authorization: `Bot ${process.env.token}`
+				}
+			}).then(d => d.data);
+			if (data.banner) {
+				let url = data.banner.startsWith("a_") ? ".gif?size=2048" : ".png?size=2048";
+				url = `https://cdn.discordapp.com/banners/${user.id}/${data.banner}${url}`;
 
-    if (!args[0]) {
-      user = message.member;
-    } else {
+				const UserInfo = new Discord.MessageEmbed()
 
+					.setTitle(user.user.tag)
+					.setDescription(`<@${user.user.id}>\nPrésent sur ce serveur depuis le <t:${parseInt(user.joinedTimestamp / 1000 )}:d>\nCompte créé le <t:${parseInt(user.user.createdTimestamp / 1000)}:d>\nServeur en commun: ${nm}`)
+					.setThumbnail(user.user.displayAvatarURL({
+						dynamic: true
+					}))
+					.setImage(url)
+					.setColor(color)
 
-   
+				message.channel.send(UserInfo)
+			} else {
 
+				const UserInfo = new Discord.MessageEmbed()
 
-      user = message.mentions.members.first() || await message.guild.members.fetch(args[0]).catch(err => { return message.channel.send(":x: Impossible de trouver cette personne!") })
-    }
+					.setTitle(user.user.tag)
+					.setDescription(`<@${user.user.id}>\nPrésent sur ce serveur depuis le <t:${parseInt(user.joinedTimestamp / 1000 )}:d>\nCompte créé le <t:${parseInt(user.user.createdTimestamp / 1000)}:d>\nServeur en commun: ${nm}`)
+					.setThumbnail(user.user.displayAvatarURL({
+						dynamic: true
+					}))
+					.setColor(color)
+					.setImage("https://cdn.discordapp.com/attachments/914596914161397762/922439441589616660/image.png")
+				//if (user.user = user.user.bot) UserInfo.setDescription(`<@${user.user.id}>\nPrésent sur ce serveur depuis le <t:${parseInt(user.joinedTimestamp / 1000 )}:d>\nCompte créé le <t:${parseInt(user.user.createdTimestamp / 1000)}:d>\nServeur en commun: ${nm}\n[Lien d'invation](https://discord.com/api/oauth2/authorize?client_id=${user.user.id}&permissions=8&scope=bot)`)
+				message.channel.send(UserInfo)
 
-    if (!user) {
-      return message.channel.send(":x: Impossible de trouver cette personne!")
-    }
-
-
-    //OPTIONS FOR STATUS
-
-    let stat = {
-      online: "https://emoji.gg/assets/emoji/9166_online.png",
-      idle: "https://emoji.gg/assets/emoji/3929_idle.png",
-      dnd: "https://emoji.gg/assets/emoji/2531_dnd.png",
-      offline: "https://emoji.gg/assets/emoji/7445_status_offline.png"
-    }
-
-    //NOW BADGES
-    let badges = await user.user.flags
-    badges = await badges ? badges.toArray() : ["None"]
-
-    let newbadges = [];
-    badges.forEach(m => {
-      newbadges.push(m.replace("_", " "))
-    })
-
-    let embed = new MessageEmbed()
-      .setThumbnail(user.user.displayAvatarURL({ dynamic: true }))
-    //ACTIVITY
-    let array = []
-    if (user.user.presence.activities.length) {
-
-      let data = user.user.presence.activities;
-
-      for (let i = 0; i < data.length; i++) {
-        let name = data[i].name || "None"
-        let xname = data[i].details || "None"
-        let zname = data[i].state || "None"
-        let type = data[i].type
-
-        array.push(`**${type}** : \`${name} : ${xname} : ${zname}\``)
-
-        if (data[i].name === "Spotify") {
-          embed.setThumbnail(`https://i.scdn.co/image/${data[i].assets.largeImage.replace("spotify:", "")}`)
-        }
-
-        embed.setDescription(array.join("\n"))
-
-      }
-    }
-
-      //EMBED COLOR BASED ON member
-      embed.setColor(user.displayHexColor === "#000000" ? "#ffffff" : user.displayHexColor)
-
-      //OTHER STUFF 
-      embed.setAuthor(user.user.tag, user.user.displayAvatarURL({ dynamic: true }))
-
-      //CHECK IF USER HAVE NICKNAME
-      if (user.nickname !== null) embed.addField("Pseudonyme", user.nickname)
-      embed.addField("**Présent depuis**", moment(user.joinedAt).format("LLLL"))
-        .addField("**Compte Créé:** ", moment(user.user.createdAt).format("LLLL"))
-        .addField("**Informations Communes**", `ID: \`${user.user.id}\`\nRobot: ${user.user.bot}\nUtilisateur Supprimé: ${user.deleted}`)
-        .addField("Badges", newbadges.join(", ").toLowerCase() || "None")
-        .setFooter(user.user.presence.status, stat[user.user.presence.status])
+			}
 
 
 
-      return message.channel.send(embed).catch(err => {
-        return message.channel.send("Erreur : " + err)
-      })
-
-
-
-    }
-
-
-
-  }
+		}
+	}
+}
