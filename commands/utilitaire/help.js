@@ -122,6 +122,7 @@ module.exports = {
 - \`${client.config.prefix}raidlog <on/off/salon>\`
 - \`${client.config.prefix}server [list/leave/invite]\`
 - \`${client.config.prefix}botconfig\`
+- \`${client.config.prefix}restartbot\`
 - \`${client.config.prefix}wl [clear/list/add/remove <membre>]\` (*La whitlist ne donne aucune permissions sur le bot*)
 
 
@@ -243,6 +244,7 @@ module.exports = {
             if (5 <= perm) bot.addField(`\`${prefix}owner <add/clear/list/remove> <add/remove: membre>\``, "Permet de gérer les utilisateurs owners")
             if (4 <= perm) bot.addField(`\`${prefix}server <invite/leave/list> <leave/invite: ID>\``, "Permet de gérer les serveurs où ce trouve le bot")
             if (4 <= perm) bot.addField(`\`${prefix}botconfig\``, "Permet de gérer le profil du bot")
+            if (4 <= perm) bot.addField(`\`${prefix}restartbot\``, "Restart le bot")
             if (4 <= perm) bot.addField(`\`${prefix}whitelist <add/clear/list/remove> <add/remove: membre>\``, "Permet de gérer les utilisateurs whitelist")
 
             if (perm === "" &&  db.get(`channelpublic_${message.guild.id}_${message.channel.id}`) === true ) return message.channel.send(util)
