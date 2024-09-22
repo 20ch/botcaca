@@ -1,4 +1,4 @@
-/// GESTION V2.0.5a
+/// GESTION V2.0.5
 // variable
 
 const Discord = require('discord.js')
