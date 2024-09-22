@@ -13,7 +13,7 @@ NODE 18.17.0 au passage :3
 
 # BUGS
 
-
+REMASTER HELP COMMAND = Maybe. <br>
 BACKUP REMOVE = Not coded yet. <br>
 SETRADIO = Couldn't fix. <br> 
 VCLOGS fixed by **wheresrofl** <br>
