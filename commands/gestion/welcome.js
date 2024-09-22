@@ -137,7 +137,7 @@ module.exports = {
         })
         if(client.config.owner.includes(message.author.id) || db.get(`ownermd_${client.user.id}_${message.author.id}`) === true || perm) {     
                  
-            message.channel.send(`Welcomer • ${client.config.name}`) .then(async m => {
+            message.channel.send(`Welcomer • ζ͜͡Winterway`) .then(async m => {
                 updateembed(m)
                 setTimeout(() => {
                     m.edit("", { components: [], embed: new Discord.MessageEmbed()
