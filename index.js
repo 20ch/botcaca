@@ -1,4 +1,4 @@
-/// WASSIM GESTION V2.0.5
+/// GESTION V2.0.5a
 // variable
 
 const Discord = require('discord.js')
