@@ -1,12 +1,12 @@
 {
-   "token": "put token in utility -> login.js",
-   "color": "#ff8d00",
+   "token": "put token here and also in utility -> login.js / mettez votre token ici et aussi dans utility -> login.js",
+   "color": "#f40c5c",
    "prefix": "+",
    "name": "ζ͜͡Winterway",
    "defaultjoinmessage": "{user} vient de rejoindre. Il a été invité par {inviter:name} qui a désormais {invite} invitations !",
    "defaultleavemessage": "{user} vient de quitter. Il avais été invité par {inviter:name} qui a désormais {invite} invitations ",
    "defaultLevelmessage": "{user} vient de passer au level {level} bravo à lui !",
    "owner": [
-      "ID DU OWNER"
+      "ID DU OWNER / OWNER ID"
    ]
 }
