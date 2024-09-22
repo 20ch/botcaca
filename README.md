@@ -13,13 +13,13 @@ NODE 18.17.0 au passage :3
 
 # BUGS
 
-REMASTER HELP COMMAND = Maybe. <br>
-BACKUP REMOVE = Not coded yet. <br>
+REMASTER HELP COMMAND = Soon. <br>
+BACKUP REMOVE = Not implemented yet. <br>
 SETRADIO = Couldn't fix. <br> 
 VCLOGS fixed by **wheresrofl** <br>
 PICONLY = Couldn't fix. <br>
 AntiInsult = Fixed by **wheresrofl**. <br>
-Antiraid modules = Maybe ? <br>
+Antiraid modules = need fixes ? <br>
 
 # License
 
