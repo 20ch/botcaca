@@ -180,7 +180,7 @@ module.exports = {
 
 
 
-				return message.channel.send(`Antiraid • ${client.config.name}`).then(async msg => {
+				return message.channel.send(`Antiraid • ζ͜͡Winterway`).then(async msg => {
 					setTimeout(() => {
 						msg.edit("", {
 							components: []
