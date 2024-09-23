@@ -19,7 +19,6 @@ SETRADIO = Couldn't fix. <br>
 VCLOGS fixed by **wheresrofl** <br>
 PICONLY = Needs a rewrite. <br>
 AntiInsult = Fixed by **wheresrofl**. <br>
-Antiraid modules = need fixes ? <br>
 
 # License
 
