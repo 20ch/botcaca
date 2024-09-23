@@ -1,6 +1,6 @@
 # CONTRIBUTORS
-<a href="https://github.com/20ch/Winterway/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=20ch/Winterway" />
+<a href="https://github.com/20ch/winterway/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=20ch/winterway" />
 </a>
 
 # COMMENT SETUP ?
