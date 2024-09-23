@@ -24,6 +24,7 @@ module.exports = {
 - \`${client.config.prefix}pic [membre]\`
 - \`${client.config.prefix}rank [membre]\`
 - \`${client.config.prefix}snipe\`
+- \`${client.config.prefix}ratio\`
 - \`${client.config.prefix}top [invite/rank]\`
         `)
    
