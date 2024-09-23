@@ -17,7 +17,8 @@ BACKUP REMOVE = Not implemented yet. <br>
 SETRADIO = Couldn't fix. <br> 
 VCLOGS fixed by **wheresrofl** <br>
 PICONLY = Needs a rewrite. <br>
-AntiInsult = Fixed by **wheresrofl**. <br>
+OSU = fixed by **focat69**
+ANTIINSULTE = Fixed by **wheresrofl**. <br>
 
 # License
 
