@@ -17,7 +17,7 @@ REMASTER HELP COMMAND = Soon. <br>
 BACKUP REMOVE = Not implemented yet. <br>
 SETRADIO = Couldn't fix. <br> 
 VCLOGS fixed by **wheresrofl** <br>
-PICONLY = Couldn't fix. <br>
+PICONLY = Needs a rewrite. <br>
 AntiInsult = Fixed by **wheresrofl**. <br>
 Antiraid modules = need fixes ? <br>
 
