@@ -26,6 +26,7 @@ module.exports = {
 - \`${client.config.prefix}snipe\`
 - \`${client.config.prefix}ratio\`
 - \`${client.config.prefix}8ball\`
+- \`${client.config.prefix}osu\`
 - \`${client.config.prefix}top [invite/rank]\`
         `)
    
