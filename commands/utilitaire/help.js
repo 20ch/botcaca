@@ -27,6 +27,7 @@ module.exports = {
 - \`${client.config.prefix}ratio\`
 - \`${client.config.prefix}8ball\`
 - \`${client.config.prefix}osu\`
+- \`${client.config.prefix}randomuser\`
 - \`${client.config.prefix}top [invite/rank]\`
         `)
    
