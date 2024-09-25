@@ -22,7 +22,7 @@ module.exports = {
     .addField('Comptes', [
       `Rôles: ${guild.roles.cache.size}`,
       `Salons: ${guild.channels.cache.size}`,
-      `Emojis: ${guild.emojis.cache.size} (Regular: ${guild.emojis.cache.filter((e) => !e.animated).size}, Animated: ${guild.emojis.cache.filter((e) => e.animated).size})`
+      `Emojis: ${guild.emojis.cache.size} (Standard: ${guild.emojis.cache.filter((e) => !e.animated).size}, Animés: ${guild.emojis.cache.filter((e) => e.animated).size})`
     ])
     .addField("Informations supplémentaires", [
       `Créé: ${moment(guild.createdTimestamp).format('LT')} ${moment(guild.createdTimestamp).format('LL')} | ${moment(guild.createdTimestamp).fromNow()}`,
