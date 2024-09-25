@@ -2,22 +2,24 @@ const discord = require("discord.js");
 
 module.exports = {
   name: "membercount",
-  category: "info",
-  description: "View how much members you have",
+  aliases: [],
+  description: "Affiche le nombre total de membres sur le serveur.",
+
+
   run: async (client, message, args) => {
     const calcembed = new discord.MessageEmbed()
-    .setDescription('Calculating / Viewing...')
-    .setColor('GREEN')
+    .setDescription('Veuillez patienter, les données sont en cours de chargement... ✨')
+    .setColor('color')
 
     const msg = await message.channel.send(calcembed)
     
     let embed = new discord.MessageEmbed()
     .setDescription(
     `
-❯ Total Members - ${message.guild.memberCount}
-❯ Humans - ${message.guild.members.cache.filter(m => !m.user.bot).size}
-❯ Bots - ${message.guild.members.cache.filter(m => m.user.bot).size}`)
-    .setColor("RANDOM")
+❯ Nombre total de membres - ${message.guild.memberCount}
+❯ Humains - ${message.guild.members.cache.filter(m => !m.user.bot).size}
+❯ Robots - ${message.guild.members.cache.filter(m => m.user.bot).size}`)
+    .setColor("color")
     .setTimestamp(message.timestamp = Date.now())
 
     msg.delete()
