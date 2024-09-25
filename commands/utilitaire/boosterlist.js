@@ -40,7 +40,7 @@ module.exports = {
 
       const embed = new MessageEmbed()
         .setColor(color)
-        .setTitle(`<a:Booster:1141164893064671334> Liste des boosters du serveur (${boosters.size} boosters)`)
+        .setTitle(`<:4_boost:1277970892068229192> Liste des boosters du serveur (${boosters.size} boosters)`)
         .setDescription(chunk);
 
       embed.setFooter(`Page ${page + 1} sur ${boosterChunks.length}`);
