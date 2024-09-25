@@ -30,6 +30,8 @@ module.exports = {
 - \`${client.config.prefix}randomuser\`
 - \`${client.config.prefix}top [invite/rank]\`
 - \`${client.config.prefix}membercount\`
+- \`${client.config.prefix}serverinfo\`
+- \`${client.config.prefix}roleinfo\`
         `)
    
             let perm = ""
