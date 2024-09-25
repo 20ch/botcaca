@@ -21,6 +21,7 @@ module.exports = {
             "Mes sources disent non.",
             "D'après le wiki de google, non.",
             "Très douteux.",
+            "Je te conseille de lancer une pièce. 🪙"
             "._."
           ];
           const question= args.join(" ")
