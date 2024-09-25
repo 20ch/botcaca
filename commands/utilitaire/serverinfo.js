@@ -12,7 +12,7 @@ module.exports = {
     let embed = new MessageEmbed()
     .setTitle(`About ${message.guild.name}`)
     .setThumbnail(message.guild.iconURL())
-    .setColor("YELLOW")
+    .setColor("color")
     .addField("ℹ️ Informations générales", [
     `ID: ${guild.id}`,
     `Nom: ${guild.name}`,
