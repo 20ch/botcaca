@@ -72,6 +72,7 @@ module.exports = {
 - \`${client.config.prefix}allbotadmin\`
 - \`${client.config.prefix}ban <membre> [temps/raison]\`
 - \`${client.config.prefix}clear [message/membre]\`
+- \`${client.config.prefix}findusers <membre>\`
 - \`${client.config.prefix}embed\`
 - \`${client.config.prefix}kick <membre> [raison]\`
 - \`${client.config.prefix}muterole [rôle]\`
