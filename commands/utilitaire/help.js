@@ -80,6 +80,8 @@ module.exports = {
 - \`${client.config.prefix}renew [salon]\`
 - \`${client.config.prefix}say <message>\`
 - \`${client.config.prefix}unmute <membre/all>\`
+- \`${client.config.prefix}booster-list\`
+- \`${client.config.prefix}booster-list\`
 `)         
 
                 const owner = new Discord.MessageEmbed()
