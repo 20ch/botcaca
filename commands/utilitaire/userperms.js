@@ -2,7 +2,7 @@ const { MessageEmbed } = require("discord.js")
 
 module.exports = {
   name: "userperms",
-  aliases: ["usrprms"],
+  aliases: [],
   description: "Afficher les permissions d'un utilisateur sur le serveur.",
 
   run: async(client, message, [member = '']) => {
