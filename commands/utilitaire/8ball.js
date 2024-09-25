@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 module.exports = {
     name: '8ball',
-    description: "Pose une question au bot",
+    description: "Pose une question à la boule de cristal magique !",
 
     run: async (client, message, args) => {
         const responses = [
@@ -26,7 +26,7 @@ module.exports = {
           ];
           const question= args.join(" ")
           if (!question) {
-            return message.reply("> Demande moi quelle que chose");
+            return message.reply("> Pose-moi une question pour que je puisse consulter ma boule de cristal ! ");
           }
       
           const randomIndex = Math.floor(Math.random() * responses.length);
