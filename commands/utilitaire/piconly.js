@@ -1,9 +1,8 @@
 module.exports = {
 
     name: 'piconly',
-    description: 'Define a channel to set only image | Définir un salon où il est uniquement possible de mettre des images',
-    category: 'utils',
-    usage: 'piconly <channel> [off to disbale]',
+    description: 'Définir un salon où il est uniquement possible de mettre des images',
+    usage: 'piconly <channel> [off pour enlever]',
     aliases: ['imageonly'],
     userPermissions: ['MANAGE_MESSAGES'],
     cooldown: 2,
