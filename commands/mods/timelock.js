@@ -1,49 +1,53 @@
-const Discord = module.require("discord.js");
-const ms = require("ms"); //Make sure to install ms package
+const Discord = require('discord.js');
+const ms = require('ms'); // Pour convertir les durées en millisecondes
 
 module.exports = {
-    name: "timelock",
-    usage: "timelock <time>",
-    category: "moderation",
-    description: "Start a timed lockdown in a channel",
-    run: async(client, message, args) => {
-        const time = args.join(" ");
-        if (!time) {
-        return message.channel.send("Enter a valid time period in `Seconds`, `Minutes` or `Hours`")
-        }
-        if (!message.member.hasPermission('MANAGE_CHANNELS')) {
-   return message.channel.send("You don't have enough powers! missing perms: `MANAGE_CHANNELS`")
-   }
-   if(!message.guild.me.hasPermission('MANAGE_CHANNELS')) {
-     return message.channel.send("I Don't Have Enough Powers To Lock! Missing Perms: `MANAGE_CHANNELS`")
-   }
-        message.channel.overwritePermissions([
-            {
-               id: message.guild.id,
-               deny : ['SEND_MESSAGES'],
-            },
-           ],);
-           const embed = new Discord.MessageEmbed()
-           .setTitle("Channel Updates")
-           .setDescription(`${message.channel} has been placed under lockdown for \`${time}\``)
-           .setFooter("Please be patient!")
-           .setColor("RANDOM");
-           message.channel.send(embed)
+    name: 'timelock',
+    description: 'Verrouille un canal pendant une durée spécifiée.',
+    usage: 'timelock <durée>',
 
-           let time1 = (`${time}`)
-           setTimeout(function(){
-           message.channel.overwritePermissions([
-               {
-               id: message.guild.id,
-               null: ['SEND_MESSAGES'],
-               },
-            ],);
-           const embed2 = new Discord.MessageEmbed()
-           .setTitle("Channel Updates")
-           .setDescription(`Locked has been lifted in ${message.channel}`)
-           .setColor("RANDOM");
-           message.channel.send(embed2);
-        }, ms(time1));
-        message.delete();
-    }
-}
+    async execute(message, args) {
+        // Récupérer la durée du verrouillage
+        const duration = args.join(' ');
+        if (!duration) return message.reply('Veuillez spécifier une durée (ex: 5m, 2h)');
+
+        // Vérifier les permissions de l'utilisateur et du bot
+        if (!message.member.hasPermission('MANAGE_CHANNELS')) {
+            return message.reply("Vous n'avez pas la permission de gérer les canaux.");
+        }
+        if (!message.guild.me.hasPermission('MANAGE_CHANNELS')) {
+            return message.reply("Je n'ai pas la permission de gérer les canaux.");
+        }
+
+        // Verrouiller le canal
+        await message.channel.overwritePermissions([
+            {
+                id: message.guild.id,
+                deny: ['SEND_MESSAGES'],
+            },
+        ]);
+
+        // Envoyer un message d'information
+        const embed = new Discord.MessageEmbed()
+            .setTitle('Canal verrouillé')
+            .setDescription(`Le canal ${message.channel} est verrouillé pendant ${duration}.`)
+            .setColor('color');
+        await message.channel.send(embed);
+
+        // Déverrouiller le canal après la durée spécifiée
+        setTimeout(() => {
+            message.channel.overwritePermissions([
+                {
+                    id: message.guild.id,
+                    allow: ['SEND_MESSAGES'],
+                },
+            ]);
+
+            const embed = new Discord.MessageEmbed()
+                .setTitle('Canal déverrouillé')
+                .setDescription(`Le canal ${message.channel} est à nouveau accessible.`)
+                .setColor('color');
+            message.channel.send(embed);
+        }, ms(duration));
+    },
+};
