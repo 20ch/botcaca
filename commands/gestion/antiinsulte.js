@@ -3,7 +3,7 @@ const db = require('quick.db');
 
 module.exports = {
   name: 'anti-insulte',
-  aliases: ["Permet de faire en sorte quye des mot soit suprimer d'un serveur"],
+  aliases: ["badword"],
   run: async (client, message, args, prefix, color) => {
     let perm = ""
     message.member.roles.cache.forEach(role => {
