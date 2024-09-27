@@ -13,6 +13,7 @@ NODE 18.17.0 au passage :3
 
 # BUGS
 
+ANTIRAID = **FULLY FIXED!**
 BACKUP REMOVE = Not implemented yet. <br>
 SETRADIO = Couldn't fix. <br> 
 VCLOGS fixed by **wheresrofl** <br>
