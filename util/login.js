@@ -22,7 +22,7 @@ const login = (client) => {
   client.inter = new Array()
 
 
-  client.login("Votre token");
+  client.login("votre token");
 
 }
 
