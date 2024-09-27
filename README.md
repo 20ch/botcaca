@@ -5,11 +5,8 @@
 
 # COMMENT SETUP ?
 
-🇫🇷 : Pour mettre le token, aller dans le dossier util et ouvrez login.js
-Vous voyez client.login("process.env.token");  remplacer le process.env.token. par le token de votre bot (ex client.login("MNJsdjuahdakjsdksajdks")
-NODE 18.17.0 au passage :3 
-
-🇺🇸 : To put the token, go to the util folder and open login.js You see client.login(process.env.token); replace the process.env.token. with the token of your bot (ex client.login(MNJsdjuahdakjsdksajdks) also use node 18.17.0 :3 
+🇫🇷 : Dans util/login.js: Remplacez process.env.token par votre token d'authentification (exemple : client.login("votre_token");).
+Utilisez Node.js 18.17.0+.
 
 # BUGS
 
