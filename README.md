@@ -21,6 +21,10 @@ PICONLY = Needs a rewrite. <br>
 OSU = fixed by **focat69** <br>
 ANTIINSULTE = Fixed by **wheresrofl**. <br>
 
+# Contribution
+
+"Tes idées sont au top ! N'hésite pas à ouvrir un ticket/pull request, je te réponds vite fait. Et si tu kiffes le projet, un petit star ⭐, ça fait toujours plaisir !
+
 # License
 
 This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0). You may not use this work for commercial purposes. You may copy, distribute, and transmit the work, and remix, tweak, and build upon it, non-commercially, as long as you credit the original work and provide a link to the license.
