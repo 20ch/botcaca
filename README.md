@@ -23,7 +23,7 @@ ANTIINSULTE = Fixed by **wheresrofl**. <br>
 
 # Contribution
 
-"Tes idées sont au top ! N'hésite pas à ouvrir un ticket/pull request, je te réponds vite fait. Et si tu kiffes le projet, un petit star ⭐, ça fait toujours plaisir !
+Tes idées sont au top ! N'hésite pas à ouvrir un ticket/pull request, je te réponds vite fait. Et si tu kiffes le projet, un petit star ⭐, ça fait toujours plaisir !
 
 # License
 
