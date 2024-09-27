@@ -6,7 +6,7 @@
 # COMMENT SETUP ?
 
 🇫🇷 : Dans util/login.js: Remplacez process.env.token par votre token d'authentification <br> (exemple : client.login("votre_token"); ).
-Utilisez Node.js 18.17.0+.
+ <br>Utilisez Node.js 18.17.0+.
 
 # BUGS
 
