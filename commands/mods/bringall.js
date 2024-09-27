@@ -1,6 +1,5 @@
 /**
- * @author larry
- * @message i love u
+ * @author larry & 20ch
  */
 
 const Discord = require('discord.js');
