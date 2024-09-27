@@ -40,7 +40,6 @@ module.exports = async (client, message) => {
 				"discord.io",
 				"discord.gg",
 				"invite.me",
-        "dsc.gg",
 				"discordapp.com/invite",
 				".gg"
 			];
@@ -77,7 +76,7 @@ module.exports = async (client, message) => {
 
 
 				db.push(`info.${message.guild.id}.${message.author.id}`, {
-					moderator: `Moi`,
+					moderator: `Bot`,
 					reason: "Message Contenant un lien",
 					date: Date.parse(new Date) / 1000,
 					id: warnID
@@ -94,7 +93,7 @@ module.exports = async (client, message) => {
 				message.member.roles.add(muterole.id).catch(err => [])
 				const embed = new Discord.MessageEmbed()
 					.setColor(color)
-					.setDescription(`${message.author} a été **mute** pour avoir \`Envoyer des invitations\``)
+					.setDescription(`${message.author} a été **mute** pour avoir \`spam des invitations\``)
 				if (raidlog) raidlog.send(embed)
 			} else
 			if (db.get(`warn_${message.author.id}`) <= 5) {
@@ -102,13 +101,13 @@ module.exports = async (client, message) => {
 				message.member.kick().catch(err => [])
 				const embed = new Discord.MessageEmbed()
 					.setColor(color)
-					.setDescription(`${message.author} a été **kick** pour avoir \`Envoyer des invitations\``)
+					.setDescription(`${message.author} a été **kick** pour avoir \`spam des invitations\``)
 				if (raidlog) raidlog.send(embed)
 			} else if (db.get(`warn_${message.author.id}`) <= 9) {
 				message.member.ban().catch(err => [])
 				const embed = new Discord.MessageEmbed()
 					.setColor(color)
-					.setDescription(`${message.author} a été **ban** pour avoir \`Envoyer des invitations\``)
+					.setDescription(`${message.author} a été **ban** pour avoir \`spam des invitations\``)
 				if (raidlog) raidlog.send(embed)
 
 			}
