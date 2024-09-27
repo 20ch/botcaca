@@ -24,14 +24,15 @@ module.exports = {
 - \`${client.config.prefix}pic [membre]\`
 - \`${client.config.prefix}rank [membre]\`
 - \`${client.config.prefix}snipe\`
-- \`${client.config.prefix}ratio\`
-- \`${client.config.prefix}8ball\`
+- \`${client.config.prefix}ratio [membre]\`
+- \`${client.config.prefix}8ball [question]\`
 - \`${client.config.prefix}osu\`
 - \`${client.config.prefix}randomuser\`
 - \`${client.config.prefix}top [invite/rank]\`
 - \`${client.config.prefix}membercount\`
 - \`${client.config.prefix}serverinfo\`
-- \`${client.config.prefix}roleinfo\`
+- \`${client.config.prefix}roleinfo [role]\`
+- \`${client.config.prefix}tos\`
         `)
    
             let perm = ""
