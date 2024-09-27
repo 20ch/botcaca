@@ -5,7 +5,7 @@
 
 # COMMENT SETUP ?
 
-🇫🇷 : Dans util/login.js: Remplacez process.env.token par votre token d'authentification <br> (exemple : client.login("votre_token"); ).
+🇫🇷 : Dans util/login.js: Remplacez process.env.token par votre token d'authentification de votre bot <br> (exemple : client.login("votre_token"); ).
  <br>Utilisez Node.js 18.17.0+.
 
 # BUGS
