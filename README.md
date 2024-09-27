@@ -14,7 +14,6 @@ ANTIRAID = **FULLY FIXED!** <br>
 BACKUP REMOVE = Not implemented yet. <br>
 SETRADIO = Couldn't fix. <br> 
 VCLOGS fixed by **wheresrofl** <br>
-PICONLY = Needs a rewrite. <br>
 OSU = fixed by **focat69** <br>
 ANTIINSULTE = Fixed by **wheresrofl**. <br>
 
