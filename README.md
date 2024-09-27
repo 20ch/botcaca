@@ -5,8 +5,7 @@
 
 # COMMENT SETUP ?
 
-🇫🇷 : Dans util/login.js: Remplacez process.env.token par votre token d'authentification <br> (exemple : client.login("votre_token"); ).
- <br>Utilisez Node.js 18.17.0+.
+🇫🇷 : Dans config.json: Remplacez "Votre token" par votre token d'authentification <br> Utilisez Node.js 18.17.0+.
 
 # BUGS
 
@@ -19,7 +18,7 @@ ANTIINSULTE = Fixed by **wheresrofl**. <br>
 
 # Contribution
 
-Tes idées sont au top ! N'hésite pas à ouvrir un ticket/pull request, je te réponds vite fait. Et si tu kiffes le projet, un petit star ⭐, ça fait toujours plaisir !
+Vos idées sont au top ! N'hésitez pas à ouvrir un ticket/pull request, je vous répondrez vite fait. <br> Et si tu kiffes le projet, un petit star ⭐, ça fait toujours plaisir !
 
 # License
 
