@@ -5,7 +5,7 @@
 
 # COMMENT SETUP ?
 
-🇫🇷 : Dans config.json: Remplacez "Votre token" par votre token d'authentification <br> Utilisez Node.js 18.17.0+.
+🇫🇷 : Dans config.json: Remplacez "Votre token" par le token d'authentification de votre bot <br> Utilisez Node.js 18.17.0+.
 
 # BUGS
 
