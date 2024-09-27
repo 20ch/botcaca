@@ -18,7 +18,7 @@ ANTIINSULTE = Fixed by **wheresrofl**. <br>
 
 # Contribution
 
-Vos idées sont au top ! N'hésitez pas à ouvrir un ticket/pull request, je vous répondrez vite fait. <br> Et si tu kiffes le projet, un petit star ⭐, ça fait toujours plaisir !
+Vos idées sont au top ! N'hésitez pas à ouvrir une pull request, je vous répondrez vite fait. <br> Et si tu kiffes le projet, un petit star ⭐, ça fait toujours plaisir !
 
 # License
 
