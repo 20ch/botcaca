@@ -49,6 +49,22 @@ module.exports = (client) => {
         }
     });
 
+    client.on('guildMemberAdd', async (member) => {
+        const savedChannelIDs = db.get(`ghostjoin_channels_${member.guild.id}`) || [];
+        if (savedChannelIDs.length === 0) return;
+    
+        savedChannelIDs.forEach(channelId => {
+            const channel = member.guild.channels.cache.get(channelId);
+            if (channel) {
+                channel.send(`${member}`, { allowedMentions: { users: [member.id] } })
+                    .then(msg => {
+                        setTimeout(() => msg.delete(), 1000);
+                    })
+                    .catch(console.error);
+            }
+        });
+    });
+
     client.guilds.cache.map(async guild => {
         await guild.members.fetch().catch(e => { })
     })
