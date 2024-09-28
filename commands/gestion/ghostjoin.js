@@ -6,7 +6,7 @@ module.exports = {
     aliases: ['gj'],
     run: async (client, message, args) => {
         if (args.length === 0) {
-            return message.channel.send('Please provide a command: `+gj #channel-name`, `+gj remove #channel-name`, or `+gj active`.');
+            return message.channel.send('Veuillez saisir une commande valide : +gj #nom-du-salon, +gj remove #nom-du-salon, ou +gj active`.');
         }
 
         const command = args[0];
@@ -15,11 +15,11 @@ module.exports = {
 
         if (command === 'remove') {
             if (!channelMention) {
-                return message.channel.send('Please mention a valid text channel to remove.');
+                return message.channel.send('Veuillez indiquer un salon de texte ghostping valide à supprimer.');
             }
 
             if (!activeChannels.includes(channelMention.id)) {
-                return message.channel.send(`The channel ${channelMention} is not set as a ghost ping channel.`);
+                return message.channel.send(`Le canal ${channelMention} n'est pas configuré comme un canal de ghostping`);
             }
 
             const updatedChannels = activeChannels.filter(id => id !== channelMention.id);
@@ -29,23 +29,23 @@ module.exports = {
 
         if (command === 'active') {
             if (activeChannels.length === 0) {
-                return message.channel.send('No ghost ping channels are currently set.');
+                return message.channel.send('Aucun canal de ghostping est actuellement configuré.');
             }
 
             const activeChannelNames = activeChannels.map(id => `<#${id}>`).join(', ');
-            return message.channel.send(`Active ghost ping channels: ${activeChannelNames}`);
+            return message.channel.send(`Canaux de ghostping actifs : ${activeChannelNames}`);
         }
 
         if (channelMention) {
             if (!activeChannels.includes(channelMention.id)) {
                 activeChannels.push(channelMention.id);
                 db.set(`ghostjoin_channels_${message.guild.id}`, activeChannels);
-                return message.channel.send(`Ghost ping channel added: ${channelMention}.`);
+                return message.channel.send(`Le canal de ghostping suivant a été ajouté : ${channelMention}`);
             } else {
-                return message.channel.send(`The channel ${channelMention} is already set as a ghost ping channel.`);
+                return message.channel.send(`Le canal ${channelMention} est déjà configuré comme un canal de ghostping.`);
             }
         } else {
-            return message.channel.send('Please mention a valid text channel.');
+            return message.channel.send('Veuillez indiquer un salon de texte valide.');
         }
     }
 };
