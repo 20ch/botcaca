@@ -136,7 +136,7 @@ module.exports = {
                     .setColor(color)
                     .addField("Permissions Giveaway", gvw === "" ? ":x:" : gvw)
                     .addField("Permissions Mods", mods === "" ? ":x:" : mods)
-                    .addField("Permissions Admins", admin === "" ? ":x:" : admin)
+                    .addField("Permissions Admin", admin === "" ? ":x:" : admin)
                     .addField("Permissions Owner", owner === "" ? ":x:" : owner)
 
                 message.channel.send(embed)
