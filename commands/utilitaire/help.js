@@ -96,6 +96,7 @@ module.exports = {
 - \`${client.config.prefix}derank <membre>\`
 - \`${client.config.prefix}emoji <add/remove> <emoji>\`
 - \`${client.config.prefix}giveaway [reroll]\` 
+- \`${client.config.prefix}ghostjoin [channel]\`
 - \`${client.config.prefix}leave\` 
 - \`${client.config.prefix}levels\`
 - \`${client.config.prefix}lock [salon/all]\`
