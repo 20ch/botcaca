@@ -6,7 +6,7 @@
 # COMMENT SETUP ?
 
 🇫🇷 : Dans util/login.js: Remplacez "(votre token")" par votre token d'authentification de votre bot <br> (exemple : client.login("Mjshadjhasjdha"); ).
- <br>Utilisez Node.js 18.17.0+.
+ <br>Utilisez Node.js 18.17.1+.
 
 # BUGS
 
