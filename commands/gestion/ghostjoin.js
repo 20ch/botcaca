@@ -6,7 +6,7 @@ module.exports = {
     aliases: ['gj'],
     run: async (client, message, args) => {
         if (args.length === 0) {
-            return message.channel.send('Veuillez saisir une commande valide : +gj #nom-du-salon, +gj remove #nom-du-salon, ou +gj active`.');
+            return message.channel.send('Veuillez saisir une commande valide : `+gj #nom-du-salon`, `+gj remove #nom-du-salon`, ou `+gj active`.');
         }
 
         const command = args[0];
