@@ -9,7 +9,7 @@ module.exports = (client, oldState, newState) => {
     const logChannelId = db.get(`logvc_${guild.id}`);
     const logChannel = guild.channels.cache.get(logChannelId);
 
-    // Check for log channel existence before sending message
+    // Winterwayy
     if (logChannel) {
       const embed = new MessageEmbed()
         .setAuthor(member.user.username, member.user.displayAvatarURL({ dynamic: true }))
