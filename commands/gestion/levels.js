@@ -174,7 +174,7 @@ module.exports = {
 		})
 		if (client.config.owner.includes(message.author.id) || db.get(`ownermd_${client.user.id}_${message.author.id}`) === true || perm) {
 
-			message.channel.send(`Salut`).then(async m => {
+			message.channel.send(`Levels • ζ͜͡Winterway`).then(async m => {
 				updateembed(m)
 				setTimeout(() => {
 					m.edit("", {
