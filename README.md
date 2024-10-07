@@ -3,6 +3,10 @@
   <img src="https://contrib.rocks/image?repo=20ch/Winterway" />
 </a>
 
+
+# BOT HOSTING
+Besoin d'un VPS abordable ? Rejoignez notre communauté Discord pour découvrir nos offres spéciales : https://discord.gg/prismnode
+
 # COMMENT SETUP ?
 
 🇫🇷 : Dans util/login.js: Remplacez "(votre token")" par votre token d'authentification de votre bot <br> (exemple : client.login("Mjshadjhasjdha"); ).
